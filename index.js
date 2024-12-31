@@ -6,9 +6,6 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
 const userRoutes = require("./routes/user");
 
 app.use("/", userRoutes);
