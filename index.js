@@ -14,6 +14,9 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: "Internal Server Error" });
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+  });
 const userRoutes = require("./routes/user");
 
 app.use("/", userRoutes);
